@@ -1,0 +1,47 @@
+version: '3'
+services:
+  postgres:
+    image: postgres
+    container_name: my_app_psql
+    ports:
+      - 5432:5432
+    env_file:
+      - ./.env_db
+    volumes:
+      - postgresdata:/var/lib/postgresql/data
+  web:
+    build: .
+    container_name: my_app_flask
+    restart: always
+    volumes:
+      - .:/usr/app/
+    ports:
+      - "5000:5000"
+    command:
+      "python3 run.py"
+    env_file:
+      - ./.env
+    depends_on:
+      - postgres
+      - redis
+  nginx:
+    image: nginx:mainline-alpine
+    container_name: my_app_nginx
+    depends_on:
+        - web
+    volumes:
+        - ./nginx-conf:/etc/nginx/conf.d
+    ports:
+        - 80:80
+    logging:
+      driver: json-file
+  redis:
+    image: "redis:alpine"
+    container_name: my_app_redis
+    ports:
+        - 6379:6379
+    volumes:
+            - redis_data:/data
+volumes:
+    postgresdata:
+    redis_data:
