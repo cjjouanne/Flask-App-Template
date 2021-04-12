@@ -12,6 +12,10 @@ EXPOSE 5000
 
 RUN pip install -r requirements.txt
 
+# Development (comment production lines and uncomment development lines)
 RUN export FLASK_APP=run.py
 
 CMD ["flask", "run"]
+
+# Production (comment development lines and uncomment production lines)
+# CMD ["gunicorn", "--bind", "0.0.0.0:5000", "wsgi:app"]

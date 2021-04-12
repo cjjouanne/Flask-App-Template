@@ -18,7 +18,10 @@ services:
     ports:
       - "5000:5000"
     command:
+      # Development (comment production line and uncomment development line)
       "python3 run.py"
+      # Production (comment development line and uncomment production line)
+      # "gunicorn --bind 0.0.0.0:5000 wsgi:app"
     env_file:
       - ./.env
     depends_on:
