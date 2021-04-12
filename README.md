@@ -7,7 +7,7 @@
 * `Docker`
 * `docker-compose`
 
-## Config app variables 
+## Config app variables
 
 First, run this command on the terminal inside the project directory to create a `.env` file.
 ```
@@ -37,22 +37,21 @@ POSTGRES_USER="myuser"
 POSTGRES_PASSWORD="mypassword"
 POSTGRES_DB="my_app"
 ```
-## Settig up Nginx 
+## Settig up Nginx
 
 First, launch the app with this command
 ```
-docker-compose up -d
+docker-compose -f local-docker-compose.yml up -d
 ```
-and then run 
+and then run
 ```
-docker-compose stop
-docker-compose down
+docker-compose -f local-docker-compose.yml stop
+docker-compose -f local-docker-compose.yml down
 ```
-This will stop the app and create a new folder named `./nginx-conf`. Then add a
-`nginx.conf` file inside this folder by running the following commands
+This will stop the app and create a new folder named `./nginx-conf/local`. Then add a`nginx.conf` file inside this folder by running the following commands
 
 ```
-cd nginx-conf
+cd nginx-conf/local
 touch nginx.conf
 ```
 Add this inside the `nginx.conf` file
@@ -69,6 +68,6 @@ Now, you are ready to go!
 
 ## Run the app! 🖥
 ```
-docker-compose up -d
+docker-compose -f local-docker-compose.yml up
 ```
 Now go to http://localhost:80 and start browsing 😉
