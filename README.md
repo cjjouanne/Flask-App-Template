@@ -1,15 +1,15 @@
-# Flask API project template
+# Flask APP project template
 
 > by [Charlie Jouanne](https://github.com/cjjouanne)
 
-## Prerequisites:
+## Prerequisites 🐳
 
 * `Docker`
 * `docker-compose`
 
-## Config app variables
+## Config app variables 
 
-First, run this command on the terminal inside the project directory to create an `.env` file.
+First, run this command on the terminal inside the project directory to create a `.env` file.
 ```
 touch .env
 ```
@@ -37,24 +37,25 @@ POSTGRES_USER="myuser"
 POSTGRES_PASSWORD="mypassword"
 POSTGRES_DB="my_app"
 ```
-## Settig up Nginx
+## Settig up Nginx 
 
 First, launch the app with this command
 ```
 docker-compose up -d
 ```
-and run
+and then run 
 ```
 docker-compose stop
 docker-compose down
 ```
-To stop it. This will create a new folder named `./nginx-conf`. Then add a
+This will stop the app and create a new folder named `./nginx-conf`. Then add a
 `nginx.conf` file inside this folder by running the following commands
 
 ```
 cd nginx-conf
 touch nginx.conf
 ```
+Add this inside the `nginx.conf` file
 ```
 server {
 	listen 80;
@@ -66,8 +67,8 @@ server {
 ```
 Now, you are ready to go!
 
-## Run the app!
+## Run the app! 🖥
 ```
 docker-compose up -d
 ```
-Now go to http://localhost:80 and start browsing :)
+Now go to http://localhost:80 and start browsing 😉
