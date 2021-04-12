@@ -1,4 +1,4 @@
-# Flask API project template
+# Flask APP project template
 
 > by [Charlie Jouanne](https://github.com/cjjouanne)
 
