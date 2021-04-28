@@ -144,3 +144,5 @@ nginx-conf/local/nginx.conf
 
 data/
 data/*
+
+.DS_Store
