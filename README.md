@@ -16,7 +16,7 @@ touch .env
 Then add this inside the `.env` file
 ```
 SECRET_KEY="a12b9af2eb5a96ch8rl1e1c6771e525b30fa2c8"
-SQLALCHEMY_DATABASE_URI="postgresql://myuser:mypassword@postrgres:5432/my_app"
+SQLALCHEMY_DATABASE_URI="postgresql://myuser:mypassword@postgres:5432/my_app"
 
 MAIL_SERVER="smtp.gmail.com"
 MAIL_PORT=465
