@@ -11,7 +11,7 @@
 
 First, run this command on the terminal inside the project directory to create a `.env` file.
 ```
-touch .env
+nano .env
 ```
 Then add this inside the `.env` file
 ```
@@ -29,7 +29,7 @@ MAIL_USE_SSL=True
 
 Run this command on terminal to create `.env_db` file.
 ```
-touch .env_db
+nano .env_db
 ```
 Then add this inside the `.env_db` file
 ```
@@ -52,7 +52,9 @@ This will stop the app and create a new folder named `./nginx-conf/local`. Then 
 
 ```
 cd nginx-conf/local
-touch nginx.conf
+```
+```
+nano nginx.conf
 ```
 Add this inside the `nginx.conf` file
 ```
