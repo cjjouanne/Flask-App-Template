@@ -136,6 +136,8 @@ cython_debug/
 !.vscode/extensions.json
 .history
 
+.DS_Store
+
 nginx-conf/
 nginx-conf/*
 nginx-conf/local/
