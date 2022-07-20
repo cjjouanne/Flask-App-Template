@@ -2,6 +2,8 @@
 
 > by [Charlie Jouanne](https://github.com/cjjouanne)
 
+> ⚠️ Do not use this template for production environments, use it for educational purposes only
+
 ## Prerequisites 🐳
 
 * `Docker`
